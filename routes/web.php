@@ -22,7 +22,9 @@ Route::get('/', function () {
 Route::get('/', [TodoListController::class, 'ViewList'])->name('show.list');
 Route::post('/welcome/add', [TodoListController::class, 'AddList'])->name('add.list');
 Route::get('/edit/{id}', [TodoListController::class, 'EditList'])->name('edit.list');
-Route::post('/', [TodoListController::class, 'UpdateList'])->name('update.list');
+Route::post('/update/list', [TodoListController::class, 'UpdateList'])->name('update.list');
+Route::get('/delete/{id}', [TodoListController::class, 'DeleteList'])->name('delete.list');
+
 
 
 

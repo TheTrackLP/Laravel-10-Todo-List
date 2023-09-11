@@ -64,7 +64,7 @@
                                 <td>{{ $data->task_description }}</td>
                                 <td>
                                     <a href="{{ route('edit.list', $data->id) }}" class="btn btn-warning">Edit</a>
-                                    <a href="#" class="btn btn-danger">Delete</a>
+                                    <a href="{{ route('delete.list', $data->id) }}" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                             @endforeach

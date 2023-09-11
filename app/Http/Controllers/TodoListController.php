@@ -50,6 +50,12 @@ class TodoListController extends Controller
             'alert-type' => 'success',
         );
 
-        return view('welcome');
+        return redirect('/')->with($notification);
+    }
+
+    public function DeleteList($id){
+        TodoList::findorfail($id)->delete();
+
+        return redirect('/');
     }
 }

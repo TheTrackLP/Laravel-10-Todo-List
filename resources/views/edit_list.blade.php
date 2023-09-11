@@ -19,6 +19,7 @@
                     <h6 class="card-title">Edit Task</h6>
                     <form class="forms-sample" method="post" action="{{ route('update.list') }}">
                         @csrf
+                        <input type="hidden" name="id" value="{{ $showData->id }} ">
                         <div class="mb-3">
                             <label for="exampleInputUsername1" class="form-label">Task Title</label>
 							<input type="text" class="form-control @error('task_title') is-invalid @enderror" value="{{ $showData->task_title}}" name="task_title" id="exampleInputUsername1" autocomplete="off" placeholder="Task Title">
